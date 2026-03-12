@@ -1,11 +1,14 @@
+import { AuthView } from "@neondatabase/auth/react/ui";
+import { useLocation } from "react-router-dom";
 
+export default function Auth() {
+  const { pathname } = useLocation();
 
-const Auth = () => {
   return (
-    <div>
-        <h1>Auth Page</h1>  
+    <div className="min-h-screen pt-24 pb-12 px-6 flex items-center justify-center">
+      <div className="max-w-md w-full">
+        <AuthView pathname={pathname} />
+      </div>
     </div>
-  )
+  );
 }
-
-export default Auth
